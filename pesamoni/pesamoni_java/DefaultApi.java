@@ -74,34 +74,6 @@ public class DefaultApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (method != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("method", method));
-        if (amount != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("amount", amount));
-        if (mobile != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("mobile", mobile));
-        if (holdername != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("holdername", holdername));
-        if (cardnumber != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("cardnumber", cardnumber));
-        if (cvv != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("cvv", cvv));
-        if (exp != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("exp", exp));
-        if (currency != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("currency", currency));
-        if (account != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("account", account));
-        if (reference != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("reference", reference));
-        if (genericmsg != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("genericmsg", genericmsg));
-        if (token != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("token", token));
-        if (bouquet != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("bouquet", bouquet));
-        if (payoption != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("payoption", payoption));
-        if (meternumber != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("meternumber", meternumber));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -142,12 +114,6 @@ public class DefaultApi {
         if (method == null) {
             throw new ApiException("Missing the required parameter 'method' when calling transactionsPost(Async)");
         }
-        
-        // verify the required parameter 'amount' is set
-        if (amount == null) {
-            throw new ApiException("Missing the required parameter 'amount' when calling transactionsPost(Async)");
-        }
-        
 
         com.squareup.okhttp.Call call = transactionsPostCall(method, amount, mobile, holdername, cardnumber, cvv, exp, currency, account, reference, genericmsg, token, bouquet, payoption, meternumber, progressListener, progressRequestListener);
         return call;
